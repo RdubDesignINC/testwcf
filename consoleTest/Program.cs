@@ -10,7 +10,8 @@ namespace consoleTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("...testing console app build...");
+            Console.WriteLine("...testing console app build....");
+            Console.WriteLine("Change 1");
         }
     }
 }
