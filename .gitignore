@@ -3,3 +3,6 @@
 ################################################################################
 
 /wcfTest/obj/Debug
+/wcfTest/bin/Debug
+/wcfTest/.vs/wcfTest/v15
+/consoleTest/obj/Debug
