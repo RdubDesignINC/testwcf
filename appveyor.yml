@@ -1,0 +1,32 @@
+version: 1.1.{build}
+
+configuration: Debug
+
+platform: Any CPU
+
+shallow_clone: true
+
+environment:
+    var1: someconnectionstringhere
+
+build:
+    verbosity: normal
+
+befor_build:
+    - ps: 
+
+after_build:
+    - ps: dir
+    - ps:Write-Host "This is Powershell"
+
+
+artifacts:
+  - path: wcfTest
+  - path: consoleTest
+
+on_success:
+    - ps: |
+        if ($true)
+        {
+            Write-Host "Success"
+        }

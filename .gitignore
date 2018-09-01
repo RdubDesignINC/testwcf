@@ -6,3 +6,8 @@
 /wcfTest/bin/Debug
 /wcfTest/.vs/wcfTest/v15
 /consoleTest/obj/Debug
+/.vs
+/consoleTest/bin/Debug
+/consoleTest/obj/Release
+/wcfTest/obj/Release
+/wcfTest/packages/Newtonsoft.Json.11.0.2
