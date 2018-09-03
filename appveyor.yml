@@ -109,10 +109,10 @@ build:
   include_nuget_references: true  # add -IncludeReferencedProjects option while packaging NuGet artifacts
 
   # MSBuild verbosity level quiet|minimal|normal|detailed
-  verbosity: normal
+  verbosity: quiet
 
 before_build:
-    - ps: Write-Host "$(var1)"
+    - ps: Write-Host "$(my_var1)"
 
 after_build:
     - ps: dir
