@@ -112,7 +112,7 @@ build:
   verbosity: quiet
 
 before_build:
-    - ps: Write-Host "$(my_var1)"
+    - ps: Write-Host "My var value is" + $env:my_var1
 
 after_build:
     - ps: dir
