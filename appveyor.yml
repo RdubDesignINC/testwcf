@@ -148,7 +148,7 @@ artifacts:
     name: wcfTestName
   - path: consoleTest
     name: consoleTestName
-  - path: JustAnotherWindowService
+  - path: JustAnotherWindowService\bin\$(configuration)
     name: JustAnotherWindowServiceName
 
 on_success:
