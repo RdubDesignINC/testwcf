@@ -11,3 +11,5 @@
 /consoleTest/obj/Release
 /wcfTest/obj/Release
 /wcfTest/packages/Newtonsoft.Json.11.0.2
+/JustAnotherWindowService/obj
+/JustAnotherWindowService/bin/Debug
