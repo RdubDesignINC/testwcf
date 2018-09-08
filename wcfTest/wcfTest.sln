@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcfTest", "wcfTest.csproj", "{50A9DC95-33DD-4D13-A86E-CC1DC9532615}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consoleTest", "..\consoleTest\consoleTest.csproj", "{1E5B8A34-30C0-483E-A097-619A0772B677}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50A9DC95-33DD-4D13-A86E-CC1DC9532615} = {50A9DC95-33DD-4D13-A86E-CC1DC9532615}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustAnotherWindowService", "..\JustAnotherWindowService\JustAnotherWindowService.csproj", "{38E3257A-CC13-4D53-A954-A1DF43626639}"
 EndProject
