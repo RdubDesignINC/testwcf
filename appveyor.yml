@@ -148,6 +148,8 @@ artifacts:
     name: wcfTestName
   - path: consoleTest
     name: consoleTestName
+  - path: JustAnotherWindowService
+    name: JustAnotherWindowServiceName
 
 on_success:
     - ps: |
