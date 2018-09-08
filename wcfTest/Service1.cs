@@ -12,7 +12,12 @@ namespace wcfTest
     {
         public string GetData(int value)
         {
-            return string.Format("You entered: {0}", value);
+            var dataMessage = "You Entered";
+            if (value > 25)
+                dataMessage = dataMessage + " WAY to big of number";
+
+
+            return string.Format($"{dataMessage} {value}");
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
