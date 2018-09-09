@@ -13,3 +13,7 @@
 /wcfTest/packages/Newtonsoft.Json.11.0.2
 /JustAnotherWindowService/obj
 /JustAnotherWindowService/bin/Debug
+/SomeWebSite/.vs
+/SomeWebSite/WebService1/bin
+/SomeWebSite/WebService1/obj/Debug
+/SomeWebSite/WebService1/WebServices.csproj.user
