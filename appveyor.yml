@@ -151,6 +151,9 @@ artifacts:
     name: consoleTestName
   - path: JustAnotherWindowService\bin\$(configuration)
     name: JustAnotherWindowServiceName
+  - path: WebService1
+    name: WebService1
+    type: WebDeployPackage
 
 on_success:
     - ps: |
