@@ -151,7 +151,7 @@ artifacts:
   - path: JustAnotherWindowService\bin\$(configuration)
     name: JustAnotherWindowServiceName
   - path: WebService1
-    name: MyWebService
+    name: WebService1
     type: WebDeployPackage
 
 on_success:
