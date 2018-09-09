@@ -152,6 +152,7 @@ artifacts:
     name: JustAnotherWindowServiceName
   - path: WebService1
     name: MyWebService
+    type: WebDeployPackage
 
 on_success:
     - ps: |
