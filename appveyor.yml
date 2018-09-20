@@ -66,8 +66,8 @@ environment:
   my_var1: value1
   my_var2: value2
   # this is how to set encrypted variable. Go to "Encrypt data" page in account menu to encrypt data.
-  my_secure_var1:
-    secure: FW3tJ3fMncxvs58/ifSP7w==
+  my_secure_variable:
+    secure: w2VyCDxIKVo9NgMlCH322EKQ4L+B0D84DLUu6MHJj1E=
 
 # environment:
 #  global:
@@ -154,6 +154,9 @@ artifacts:
   - path: WebService1
     name: WebService1
     type: WebDeployPackage
+
+after_deploy:
+- ps: "'test' | out-file \"test.txt\""
 
 on_success:
     - ps: |
