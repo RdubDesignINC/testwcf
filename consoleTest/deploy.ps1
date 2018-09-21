@@ -11,7 +11,7 @@ if($mysched1 -eq $null)
     $headers["Content-type"] = "application/json"
     $build_info = Invoke-RestMethod -Uri 'https://ci.appveyor.com/api/environments/39631/settings' -Headers $headers -Method Get  | Select-Object -ExpandProperty environment
 
-    $pw = $build_info[0].settings.environmentVariables | Where-Object name -eq "CanICallThisInDeploy" | Select-Object -ExpandProperty value | Select-Object value
+    $pw = $build_info[0].settings.environmentVariables | Where-Object name -eq "Password" | Select-Object -ExpandProperty value | Select-Object value
 
     Write-Host $pw
 
