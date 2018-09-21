@@ -156,7 +156,7 @@ artifacts:
     type: WebDeployPackage
 
 after_deploy:
-- ps: "'test' | out-file \"test.txt\""
+- ps: Write-Host "This is fired after deploy"
 
 on_success:
     - ps: |
