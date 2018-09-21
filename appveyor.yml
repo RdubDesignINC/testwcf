@@ -154,12 +154,12 @@ artifacts:
   - path: WebService1
     name: WebService1
     type: WebDeployPackage
-deploy:
-- provider: Environment
-  name: jacob-local
+# deploy:
+# - provider: Environment
+#   name: jacob-local
 
-after_deploy:
-- ps: Write-Host "This is fired after deploy"
+# after_deploy:
+# - ps: Write-Host "This is fired after deploy"
 
 on_success:
     - ps: |
