@@ -6,7 +6,7 @@ if($mysched1 -eq $null)
 	$temp2 = $env:APPLICATION_PATH
 	$temp3 = $env:APPLICATION_NAME
 
-	"localpath $($temp1) appPath- $($temp2) appName- $($temp3)" | out-file "C:\temp\Output.txt"
+	"localpath $temp1 appPath- $temp2 appName- $temp3 " | out-file "C:\temp\Output.txt"
 
     $token = 'vhfbd63dvitncm9k7pa0'
     $headers = @{}
