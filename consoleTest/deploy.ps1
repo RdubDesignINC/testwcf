@@ -13,13 +13,13 @@ if($mysched1 -eq $null)
 
     $pw = $build_info[0].settings.environmentVariables | Where-Object name -eq "Password" | Select-Object -ExpandProperty value | Select-Object value
 
-    Write-Host $pw
+    Write-Host $pw.value
 
     $A = New-ScheduledTaskAction -Execute "C:\appveyor\projects\testwcf\applications\consoleTestName\bin\Debug\consoleTest.exe"
     $S = New-ScheduledTaskSettingsSet
     $T = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Hours 1)
-    $D = New-ScheduledTask -Description TEST -Action $A -Settings $S -Trigger $T
-    Register-ScheduledTask MySched1 -InputObject $D -User JacobLenovo -Password $pw
+    $D = New-ScheduledTask -Description TEST -Action $A -Principle "JacobLenovo" -Settings $S -Trigger $T
+    Register-ScheduledTask MySched1 -InputObject $D  #-User JacobLenovo -Password $pw
 }
 else
 {
