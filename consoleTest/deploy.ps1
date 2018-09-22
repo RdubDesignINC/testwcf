@@ -2,8 +2,11 @@
 if($mysched1 -eq $null)
 {
     echo "now you are going to get it my friend"
+	$temp1 = $env:ARTIFACT_LOCALPATH
+	$temp2 = $env:APPLICATION_PATH
+	$temp3 = $env:APPLICATION_NAME
 
-	"localpath $($env:ARTIFACT_LOCALPATH) appPath- $($env:APPLICATION_PATH) appName- $($env:APPLICATION_NAME)" | out-file "C:\temp\Output.txt"
+	"localpath $($temp1) appPath- $($temp2) appName- $($temp3)" | out-file "C:\temp\Output.txt"
 
     $token = 'vhfbd63dvitncm9k7pa0'
     $headers = @{}
