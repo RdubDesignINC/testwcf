@@ -3,7 +3,7 @@ if($mysched1 -eq $null)
 {
     echo "now you are going to get it my friend"
 
-
+	$env:ARTIFACT_LOCALPATH | out-file Output.txt
 
     $token = 'vhfbd63dvitncm9k7pa0'
     $headers = @{}
