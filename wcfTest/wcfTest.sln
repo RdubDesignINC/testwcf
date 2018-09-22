@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcfTest", "wcfTest.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consoleTest", "..\consoleTest\consoleTest.csproj", "{1E5B8A34-30C0-483E-A097-619A0772B677}"
 	ProjectSection(ProjectDependencies) = postProject
+		{9D81735A-B9A6-408A-9D2D-B868778A6338} = {9D81735A-B9A6-408A-9D2D-B868778A6338}
 		{50A9DC95-33DD-4D13-A86E-CC1DC9532615} = {50A9DC95-33DD-4D13-A86E-CC1DC9532615}
 	EndProjectSection
 EndProject
