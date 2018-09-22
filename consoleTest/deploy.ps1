@@ -18,7 +18,8 @@ if($mysched1 -eq $null)
     $A = New-ScheduledTaskAction -Execute "C:\appveyor\projects\testwcf\applications\consoleTestName\bin\Debug\consoleTest.exe"
     $S = New-ScheduledTaskSettingsSet
     $T = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Hours 1)
-    $D = New-ScheduledTask -Description TEST -Action $A -Principle "JacobLenovo" -Settings $S -Trigger $T
+    $P = New-ScheduledTaskPrincipal "desktop-dtu1uo9\JacobLenovo"
+    $D = New-ScheduledTask -Description TEST -Action $A -Settings $S -Principal $P -Trigger $T
     Register-ScheduledTask MySched1 -InputObject $D  #-User JacobLenovo -Password $pw
 }
 else
