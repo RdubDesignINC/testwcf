@@ -1,8 +1,9 @@
 ﻿$mysched1 = Get-ScheduledTask MySched1
 if($mysched1 -eq $null)
 {
+    echo "now you are going to get it my friend"
 
-	$env:APPLICATION_PATH | out-file "C:\temp\Output.txt"
+	$env:ARTIFACT_LOCALPATH | out-file "C:\temp\Output.txt"
 
     $token = 'vhfbd63dvitncm9k7pa0'
     $headers = @{}
