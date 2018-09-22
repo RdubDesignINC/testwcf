@@ -92,7 +92,9 @@ environment:
 #  assembly_informational_version: "{version}"
 
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
-configuration: Debug
+configuration:
+    - Debug
+    - Release
 
 platform: Any CPU
 
@@ -151,9 +153,9 @@ artifacts:
     name: consoleTestName
   - path: JustAnotherWindowService\bin\$(configuration)
     name: JustAnotherWindowServiceName
-  - path: WebService1
-    name: WebService1
-    type: WebDeployPackage
+  # - path: WebService1
+  #   name: WebService1
+  #   type: WebDeployPackage
 # deploy:
 # - provider: Environment
 #   name: jacob-local
