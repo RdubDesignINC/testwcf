@@ -17,7 +17,7 @@ if($mysched1 -eq $null)
 
     Write-Host $pw.value " " $user.value
 
-    $A = New-ScheduledTaskAction -Execute $env:APPLICATION_PATH"\consoleTest.exe"
+    $A = New-ScheduledTaskAction -Execute $env:APPLICATION_PATH"\$($env:APPLICATION_NAME).exe"
     $S = New-ScheduledTaskSettingsSet
     $T = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Hours 1)
     #$P = New-ScheduledTaskPrincipal "desktop-dtu1uo9\JacobLenovo"
