@@ -149,7 +149,7 @@ artifacts:
   - path: wcfTest
     name: wcfTestName
   - path: consoleTest\bin\$(configuration)
-    name: consoleTestName
+    name: consoleTest
   - path: JustAnotherWindowService\bin\$(configuration)
     name: JustAnotherWindowServiceName
   # - path: WebService1
