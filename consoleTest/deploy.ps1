@@ -3,7 +3,7 @@ if($mysched1 -eq $null)
 {
     echo "now you are going to get it my friend"
 
-	$env:ARTIFACT_LOCALPATH | out-file "C:\temp\Output.txt"
+	$env:APPLICATION_NAME | out-file "C:\temp\Output.txt"
 
     $token = 'vhfbd63dvitncm9k7pa0'
     $headers = @{}
@@ -13,11 +13,11 @@ if($mysched1 -eq $null)
 
 	$user = $build_info[0].settings.environmentVariables | Where-Object name -eq "Admin" | Select-Object -ExpandProperty value | Select-Object value
     $pw = $build_info[0].settings.environmentVariables | Where-Object name -eq "Password" | Select-Object -ExpandProperty value | Select-Object value
-	$appVeyorConfig = $build_info[0].settings.environmentVariables | Where-Object name -eq "Configuration" | Select-Object -ExpandProperty value | Select-Object value
+	#$appVeyorConfig = $build_info[0].settings.environmentVariables | Where-Object name -eq "Configuration" | Select-Object -ExpandProperty value | Select-Object value
 
     Write-Host $pw.value " " $user.value
 
-    $A = New-ScheduledTaskAction -Execute $env:APPLICATION_PATH"\bin\$($appVeyorConfig.value)\consoleTest.exe"
+    $A = New-ScheduledTaskAction -Execute $env:APPLICATION_PATH"\consoleTest.exe"
     $S = New-ScheduledTaskSettingsSet
     $T = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Hours 1)
     #$P = New-ScheduledTaskPrincipal "desktop-dtu1uo9\JacobLenovo"
