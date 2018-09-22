@@ -148,7 +148,7 @@ before_package:
 artifacts:
   - path: wcfTest
     name: wcfTestName
-  - path: consoleTest
+  - path: consoleTest\bin\$(configuration)
     name: consoleTestName
   - path: JustAnotherWindowService\bin\$(configuration)
     name: JustAnotherWindowServiceName
