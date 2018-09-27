@@ -3,9 +3,9 @@ if($mysched1 -eq $null)
 {
     echo "now you are going to get it my friend"
 
-	$env:myVar | out-file "C:\temp\Output2.txt"
+	$env:apiToken | out-file "C:\temp\Output2.txt"
 
-    $token = 'vhfbd63dvitncm9k7pa0'
+    $token = $env:apiToken
     $headers = @{}
     $headers['Authorization'] = "Bearer $token"
     $headers["Content-type"] = "application/json"

@@ -67,7 +67,9 @@ environment:
   my_var2: value2
   # this is how to set encrypted variable. Go to "Encrypt data" page in account menu to encrypt data.
   my_secure_variable:
-    secure: w2VyCDxIKVo9NgMlCH322EKQ4L+B0D84DLUu6MHJj1E=
+    secure: w2VyCDxIKVo9NgMlCH322EKQ4L+B0D84DLUu6MHJj1E=1
+  api_token:
+    secure: Y2igsPkGlQ95Kc52nO7iEk5stdW4LVPTLaNsrj6vJuo=
 
 # environment:
 #  global:
@@ -156,10 +158,9 @@ artifacts:
   #   name: WebService1
   #   type: WebDeployPackage
 deploy:
-
 - provider: Environment
   name: jacob-local
-  myVar: myValThisHasComeFromMyDeployPs1
+  apiToken: $env:api_token
   on:
     branch: master
 
