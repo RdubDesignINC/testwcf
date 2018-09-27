@@ -169,12 +169,7 @@ after_deploy:
     - ps:  |
         Write-Host "Testing after deploy..."
         Write-Host $env:my_secure_variable
-        $A = New-ScheduledTaskAction -Execute "consoleTest\bin\test\consoleTest.exe"
-        $S = New-ScheduledTaskSettingsSet
-        $T = New-ScheduledTaskTrigger -Daily -At 3am  
-        $P = New-ScheduledTaskPrincipal "desktop-dtu1uo9\JacobLenovo"
-        $D = New-ScheduledTask -Description OKOne -Action $A -Settings $S -Trigger $T -Principal $P
-        Register-ScheduledTask -TaskName OKOne -InputObject $D -Force
+        New-MsmqQueue -Name "tester" -QueueType Private  -Label "private$\tester"
 on_success:
     - ps: |
         if ($true)
