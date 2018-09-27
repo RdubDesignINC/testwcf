@@ -71,6 +71,7 @@
     <None Include="Connected Services\ServiceReference1\wcfTest.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="deploy.ps1" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
