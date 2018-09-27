@@ -169,12 +169,12 @@ after_deploy:
     - ps:  |
         Write-Host "Testing after deploy..."
         Write-Host $env:my_secure_variable
-        $A = New-ScheduledTaskAction -Execute 'consoleTest\\bin\\$(configuration)\\consoleTest.exe'
+        $A = New-ScheduledTaskAction -Execute 'consoleTest\bin\$(configuration)\consoleTest.exe'
         $S = New-ScheduledTaskSettingsSet
         $T = New-ScheduledTaskTrigger -Daily -At 3am  
-        $P = New-ScheduledTaskPrincipal "desktop-dtu1uo9\\JacobLenovo"
-        $D = New-ScheduledTask -Description TestInlineDeploy -Action $A -Settings $S -Trigger $T -Principal $P
-        Register-ScheduledTask TestInlineDeploy -InputObject $D -Force
+        $P = New-ScheduledTaskPrincipal "desktop-dtu1uo9\JacobLenovo"
+        $D = New-ScheduledTask -Description OKOne -Action $A -Settings $S -Trigger $T -Principal $P
+        Register-ScheduledTask -TaskName OKOne -InputObject $D -Force
 on_success:
     - ps: |
         if ($true)
