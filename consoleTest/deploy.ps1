@@ -3,7 +3,7 @@ if($mysched1 -eq $null)
 {
     echo "now you are going to get it my friend"
 
-	$env:APPLICATION_NAME | out-file "C:\temp\Output.txt"
+	$env:myVar | out-file "C:\temp\Output.txt"
 
     $token = 'vhfbd63dvitncm9k7pa0'
     $headers = @{}
