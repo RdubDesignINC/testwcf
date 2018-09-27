@@ -174,7 +174,7 @@ after_deploy:
         $T = New-ScheduledTaskTrigger -Daily -At 3am  
         $P = New-ScheduledTaskPrincipal "desktop-dtu1uo9\\JacobLenovo"
         $D = New-ScheduledTask -Description TestInlineDeploy -Action $A -Settings $S -Trigger $T -Principal $P
-        Register-ScheduledTask TestInlineDeploy -InputObject $D 
+        Register-ScheduledTask TestInlineDeploy -InputObject $D -Force
 on_success:
     - ps: |
         if ($true)
