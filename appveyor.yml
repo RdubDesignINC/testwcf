@@ -68,7 +68,7 @@ environment:
   # this is how to set encrypted variable. Go to "Encrypt data" page in account menu to encrypt data.
   my_secure_variable:
     secure: w2VyCDxIKVo9NgMlCH322EKQ4L+B0D84DLUu6MHJj1E=1
-  api_token:
+  apiToken:
     secure: Y2igsPkGlQ95Kc52nO7iEk5stdW4LVPTLaNsrj6vJuo=
 
 # environment:
@@ -160,7 +160,7 @@ artifacts:
 deploy:
 - provider: Environment
   name: jacob-local
-  apiToken: $env:api_token
+  apiToken: $(apiToken)
   on:
     branch: master
 
